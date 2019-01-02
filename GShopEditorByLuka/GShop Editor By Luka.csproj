@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3BD5A88-C3F2-4C04-82B2-2342A938A27B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GShopEditorByLuka</RootNamespace>
+    <AssemblyName>GShop Editor By Luka</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>store.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dropbox.Api">
+      <HintPath>bin\x86\Release\Dropbox.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="LBLIBRARY">
+      <HintPath>..\..\..\LBLIBRARY\LBLIBRARY\bin\Release\LBLIBRARY.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>bin\x86\Release\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UdE_Library, Version=1.0.5918.4034, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\UdE_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="UIExceptionHandlerWinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\UIExceptionHandlerWinForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Error_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error_search.Designer.cs">
+      <DependentUpon>Error_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GshopsInteraction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GshopsInteraction.Designer.cs">
+      <DependentUpon>GshopsInteraction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gshop_data.cs" />
+    <Compile Include="IconChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IconChooser.Designer.cs">
+      <DependentUpon>IconChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Option.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Option.Designer.cs">
+      <DependentUpon>Option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCategoryForm.Designer.cs">
+      <DependentUpon>SelectCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Select_id.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_id.Designer.cs">
+      <DependentUpon>Select_id.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimestampForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimestampForm.Designer.cs">
+      <DependentUpon>TimestampForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolTip.Designer.cs">
+      <DependentUpon>ToolTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatesViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatesViewer.Designer.cs">
+      <DependentUpon>UpdatesViewer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Error_search.resx">
+      <DependentUpon>Error_search.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GshopsInteraction.resx">
+      <DependentUpon>GshopsInteraction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IconChooser.resx">
+      <DependentUpon>IconChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Option.resx">
+      <DependentUpon>Option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCategoryForm.resx">
+      <DependentUpon>SelectCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_id.resx">
+      <DependentUpon>Select_id.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimestampForm.resx">
+      <DependentUpon>TimestampForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolTip.resx">
+      <DependentUpon>ToolTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatesViewer.resx">
+      <DependentUpon>UpdatesViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game.ani" />
+    <None Include="Resources\normal.ani" />
+    <None Include="Resources\show.ico" />
+    <None Include="Resources\Exit.ico" />
+    <None Include="Resources\Open_file.ico" />
+    <None Include="Resources\Options.ico" />
+    <None Include="Resources\accept.ico" />
+    <None Include="Resources\button_cancel.ico" />
+    <None Include="Resources\Under_category.ico" />
+    <None Include="Resources\search.ico" />
+    <None Include="Resources\InsertColor.ico" />
+    <None Include="Resources\BiGQuestionMark.png" />
+    <None Include="Resources\Clone.ico" />
+    <None Include="Resources\Add_item_icon.ico" />
+    <None Include="Resources\remove.ico" />
+    <None Include="Resources\Save.ico" />
+    <None Include="Resources\move.ico" />
+    <None Include="Resources\move_up.ico" />
+    <None Include="Resources\move_down.ico" />
+    <None Include="Resources\rename.ico" />
+    <None Include="Resources\shopping-basket-refresh.ico" />
+    <None Include="Resources\arrow-alt-down.ico" />
+    <None Include="Resources\32x32_Question.ico" />
+    <None Include="Resources\Categories.ico" />
+    <None Include="Resources\info.ico" />
+    <None Include="Resources\CategoriesWindow.ico" />
+    <None Include="Resources\SaveSev.ico" />
+    <None Include="Resources\Set_time.ico" />
+    <None Include="Resources\English.ico" />
+    <None Include="Resources\Russian.ico" />
+    <None Include="Resources\user_walk.ico" />
+    <None Include="Resources\Fix.ico" />
+    <None Include="Resources\back.ico" />
+    <None Include="Resources\gnome-settings-default-applications.ico" />
+    <None Include="Resources\Create.ico" />
+    <None Include="Resources\monotone_pen_write.ico" />
+    <None Include="Resources\ToSelectedItem.ico" />
+    <None Include="Resources\Seerach_options.ico" />
+    <None Include="Resources\document-export.ico" />
+    <None Include="Resources\import.ico" />
+    <None Include="Resources\PreviousList.ico" />
+    <None Include="Resources\VerticalLine.gif" />
+    <None Include="Resources\silver.ico" />
+    <None Include="Resources\rename1.ico" />
+    <None Include="Resources\RenameWith.ico" />
+    <None Include="Resources\ExtraGshopdata.ico" />
+    <None Include="Resources\Interaction.ico" />
+    <None Include="Resources\Right.ico" />
+    <None Include="Resources\Left.ico" />
+    <Content Include="DevIL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\brush.ico" />
+    <Content Include="store.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

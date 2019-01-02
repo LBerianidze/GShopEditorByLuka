@@ -215,6 +215,30 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DevILNet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Dropbox.Api.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LBLIBRARY.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="NLog.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UdE_Library.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UIExceptionHandlerWinForms.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="zlib.net.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Game.ani" />
     <None Include="Resources\normal.ani" />
     <None Include="Resources\show.ico" />
@@ -264,9 +288,9 @@
     <None Include="Resources\Interaction.ico" />
     <None Include="Resources\Right.ico" />
     <None Include="Resources\Left.ico" />
-    <Content Include="DevIL.dll">
+    <None Include="DevIL.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
     <None Include="Resources\brush.ico" />
     <Content Include="store.ico" />
   </ItemGroup>
@@ -277,6 +301,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
